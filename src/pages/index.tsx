@@ -31,9 +31,7 @@ export default function Home() {
       <Head>
         <title> Início | blog/Zero </title>
       </Head>
-      <h1 className={styles.title}>
-        <span>Teste</span>
-      </h1>
+      <h1 className={styles.title}></h1>
     </>
   );
 }
