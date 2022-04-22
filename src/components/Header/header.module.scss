@@ -1,8 +1,8 @@
 .headerContainer {
+  background: var (--gray-900);
 }
 
 .headerContent {
-  left: 348px;
-
-  justify-content: center;
+  margin-left: 348px;
+  margin-top: 80px;
 }

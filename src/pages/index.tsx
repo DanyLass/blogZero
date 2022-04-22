@@ -29,9 +29,15 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title> Início | blog/Zero </title>
+        <title> Home | blog/Zero </title>
       </Head>
-      <h1 className={styles.title}></h1>
+      <main className={styles.contentContainer}>
+        <section className={styles.default}>
+          <h1> Como utilizar Hooks </h1>
+
+          <h5> Pensando em sicronização em vez de ciclos de vida.</h5>
+        </section>
+      </main>
     </>
   );
 }
