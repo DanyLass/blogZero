@@ -1,8 +1,39 @@
-.contentContainer {
+.default {
   margin-left: 348px;
-  margin-top: 80px;
+  margin-top: 25px;
+}
 
-  .default {
-    font-family: Inter;
+.post {
+  a {
+    display: block;
+  }
+  a + a {
+    margin-top: 3rem;
+  }
+
+  h1 {
+    font-size: 28px;
+    color: var (--white);
+  }
+  p {
+    height: 22px;
+    font-size: 18px;
+    margin-top: 8px;
+    color: var (--gray-100);
+  }
+
+  ul {
+    display: flex;
+    margin-top: 24px;
+    list-style: none;
+
+    li {
+      font-size: 15px;
+      margin-right: 1rem;
+    }
+
+    svg {
+      margin-right: 0.5rem;
+    }
   }
 }

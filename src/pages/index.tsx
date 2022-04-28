@@ -1,5 +1,8 @@
 import { GetStaticProps } from 'next';
 import Head from 'next/head';
+import Link from 'next/link';
+import { FiCalendar, FiUser } from 'react-icons/fi';
+import { Button } from '../components/Button';
 
 import { getPrismicClient } from '../services/prismic';
 
@@ -31,12 +34,27 @@ export default function Home() {
       <Head>
         <title> Home | blog/Zero </title>
       </Head>
-      <main className={styles.contentContainer}>
+      <main>
         <section className={styles.default}>
-          <h1> Como utilizar Hooks </h1>
+          <Link href="/">
+            <a className={styles.post}>
+              <h1> Como utilizar Hooks </h1>
 
-          <h5> Pensando em sicronização em vez de ciclos de vida.</h5>
+              <p> Pensando em sicronização em vez de ciclos de vida.</p>
+              <ul>
+                <li>
+                  <FiCalendar />
+                  15 Mar 2021
+                </li>
+                <li>
+                  <FiUser />
+                  Daniela Dias
+                </li>
+              </ul>
+            </a>
+          </Link>
         </section>
+        <Button />
       </main>
     </>
   );

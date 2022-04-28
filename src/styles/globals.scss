@@ -8,6 +8,7 @@
   --white: #f8f8f8;
 
   --gray-100: #d7d7d7;
+  --gray-200: #bbbbbb;
 
   --gray-900: #1a1d23;
 
@@ -28,7 +29,7 @@
 
 body {
   background: var(--gray-900);
-  color: var(--white);
+  color: var(--gray-100);
 }
 
 body,
@@ -41,4 +42,8 @@ select {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+button {
+  cursor: pointer;
 }
