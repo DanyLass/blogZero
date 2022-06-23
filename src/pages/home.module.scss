@@ -1,39 +1,49 @@
 .default {
   margin-left: 348px;
-  margin-top: 25px;
-}
+  margin-top: 2rem;
 
-.post {
   a {
     display: block;
   }
   a + a {
     margin-top: 3rem;
   }
+}
 
-  h1 {
-    font-size: 28px;
+.post{
+
+ h2 {
+    font-size: 1.75 rem;
+    font-weight: bold;
     color: var (--white);
   }
+
   p {
-    height: 22px;
-    font-size: 18px;
-    margin-top: 8px;
+
+    font-size: 1.125rem;
+    margin-top: 0.5rem;
     color: var (--gray-100);
   }
 
   ul {
+
     display: flex;
-    margin-top: 24px;
+    margin-top: 1.5rem;
     list-style: none;
 
-    li {
-      font-size: 15px;
-      margin-right: 1rem;
-    }
 
-    svg {
-      margin-right: 0.5rem;
+
+
+   li {
+      font-size: 0.875rem;
+      svg {
+        margin-right: 0.5rem;
+      }
+
+    & + li {
+      margin-left:1.625rem;
     }
   }
+  }
 }
+

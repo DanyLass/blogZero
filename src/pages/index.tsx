@@ -1,8 +1,9 @@
 import { GetStaticProps } from 'next';
-import Head from 'next/head';
 import Link from 'next/link';
 import { FiCalendar, FiUser } from 'react-icons/fi';
 import { Button } from '../components/Button';
+import { Header } from '../components/Header';
+import Prismic from '@prismicio/client';
 
 import { getPrismicClient } from '../services/prismic';
 
@@ -31,15 +32,12 @@ interface HomeProps {
 export default function Home() {
   return (
     <>
-      <Head>
-        <title> Home | blog/Zero </title>
-      </Head>
-      <main>
-        <section className={styles.default}>
+     <main>
+      <Header />
+        <div className={styles.default}>
           <Link href="/">
             <a className={styles.post}>
-              <h1> Como utilizar Hooks </h1>
-
+              <h2> Como utilizar Hooks </h2>
               <p> Pensando em sicronização em vez de ciclos de vida.</p>
               <ul>
                 <li>
@@ -53,16 +51,27 @@ export default function Home() {
               </ul>
             </a>
           </Link>
-        </section>
+        </div>
         <Button />
       </main>
     </>
   );
 }
 
-// export const getStaticProps = async () => {
-//   // const prismic = getPrismicClient();
-//   // const postsResponse = await prismic.query(TODO);
+export const getStaticProps: GetStaticProps = async () => {
+  const prismic = getPrismicClient();
+  const postsResponse = await prismic.query(
+    [Prismic.Predicates.at('document.type', ' /posts')],
+    {
+      pageSize: 1
+    }
+  );
+  console.log(postsResponse);
 
-//   // TODO
-// };
+    return {
+      props: {
+      postsResponse
+    }
+  }
+
+};
